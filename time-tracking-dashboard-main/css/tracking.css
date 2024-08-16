@@ -1,51 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root{
+:root {
     /****************** Primary  ******************/
-    --Blue: hsl(246, 80%, 60%); 
-    --Light-red-work: hsl(15, 100%, 70%); 
-    --Soft-blue-play: hsl(195, 74%, 62%); 
-    --Light-red-study: hsl(348, 100%, 68%); 
-    --Lime-green-exercise: hsl(145, 58%, 55%); 
-    --Violet-social: hsl(264, 64%, 52%); 
-    --Soft-orange-self-care: hsl(43, 84%, 65%); 
-    
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+
     /***************** Neutral  *********************/
-    --Very-dark-blue: hsl(226, 43%, 10%); 
-    --Dark-blue: hsl(235, 46%, 20%); 
-    --Desaturated-blue: hsl(235, 45%, 61%); 
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
     --Pale-Blue: hsl(236, 100%, 87%);
 }
 
-body{
+body {
     background: var(--Very-dark-blue);
     font-family: "Rubik", sans-serif;
 }
 
-main{
+main {
     height: 100vh;
     margin: 0 auto;
 }
 
 .grid-data {
-    margin: 57px auto;
-    display: flex;
-    justify-content: center;
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
 }
 
-.grid-row h1{
+.activity-grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.activity-grid-row h1,
+.grid-row h1 {
     color: #fff;
     font-size: 3.5rem;
     font-weight: 300;
@@ -63,13 +70,13 @@ main{
     z-index: 9;
 }
 
-.report-name h1{
+.report-name h1 {
     font-size: 2.5rem;
     font-weight: 200;
     color: #fff;
 }
 
-.report-name p{
+.report-name p {
     color: var(--Pale-Blue);
     font-weight: 300;
     font-size: 1.125rem;
@@ -97,7 +104,8 @@ main{
     color: #fff;
 }
 
-.data-toggle li, a{
+.data-toggle li,
+a {
     color: var(--Desaturated-blue);
     list-style: none;
     text-decoration: none;
@@ -105,7 +113,7 @@ main{
     cursor: pointer;
 }
 
-a:hover{
+a:hover {
     color: #fff;
 }
 
@@ -114,9 +122,9 @@ a:hover{
     position: relative;
 }
 
-.transform{
+.transform {
     position: relative;
-    top: -6.5rem;
+    top: -1.5rem;
 }
 
 .overlay-work {}
@@ -128,21 +136,21 @@ a:hover{
     background-color: red;
 }
 
-.img-work{
+.img-work {
     background-color: var(--Light-red-work);
     background-image: url(../images/icon-work.svg);
     background-repeat: no-repeat;
     background-position-x: 10rem;
 }
 
-.img-case{
+.img-case {
     background-color: var(--Soft-blue-play);
     background-image: url(../images/icon-play.svg);
     background-repeat: no-repeat;
     background-position-x: 10rem;
 }
 
-.img-study{
+.img-study {
     background-color: var(--Light-red-study);
     background-image: url(../images/icon-study.svg);
     background-repeat: no-repeat;
@@ -181,65 +189,96 @@ a:hover{
     cursor: pointer;
 }
 
-.data-box:hover{
+.data-box:hover {
     background-color: var(--Desaturated-blue);
 }
 
-.data-box small{
+.data-box small {
     color: var(--Desaturated-blue);
 }
+
 .elipses-bar {
     display: flex;
     justify-content: space-around;
     padding-top: 1rem;
 }
 
-.log-data{
+.log-data {
     padding: 4rem 2rem;
 }
 
-.elipses-bar small{
+.elipses-bar small {
     color: #fff;
 }
 
-.ellipsis-bars {}
+@media(max-width: 48rem) {
+    .grid-data {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 2rem;
+    }
 
-.overlay-fun {}
-
-.overlay-study {}
-
-.overlay-exercise {}
-
-.overlay-social {}
-
-.overlay-care {}
-
-@media(max-width: 48rem){
-    .grid-row{
+    .grid-row {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .report-name{
+    .activity-grid-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .report-name {
         width: 20.438rem;
         height: 7.625rem;
     }
 
-    .data-box{
+    .data-selection {
         width: 20.438rem;
         height: 7.625rem;
     }
 
-    .data-box h1{
+    .data-toggle {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .report-name {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .avatar-img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .report-name h1 {
+        font-size: 1.5rem;
+    }
+
+    .report-name p {
+        font-size: 0.938rem;
+    }
+
+    .data-box {
+        width: 20.438rem;
+        height: 7.625rem;
+    }
+
+    .data-box h1 {
         font-size: 2rem;
     }
 
-    .overlay-img{
+    .overlay-img {
         width: 20.438rem;
+        background-position-x: 14rem;
     }
 
-    .log-data{
+    .log-data {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem 2rem;
     }
 }

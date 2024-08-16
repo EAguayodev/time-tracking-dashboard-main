@@ -6,75 +6,211 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Time tracking dashboard</title>
   <link rel="stylesheet" href="css/tracking.css">
-  <script src="js/trakcing.js" defer></script>
+  <script src="js/tracking.js" defer></script>
 </head>
 <body>
+  <main>
+    <!-- grid data -->
+    <div class="grid-data">
+      <div class="grid-row">
+        <!-- Jeremy Robson data section -->
+        <div class="report-name">
+         <div>
+          <img class="avatar-img" src="images/image-jeremy.png" alt="Jeremy Robinnson monthly, weekly, daily data">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
+         </div>
+          <!-- daily, weekly, monthly report -->
+        </div>
+        <!-- Jeremy Robson data section -->
+       
+        <!-- daily, weekly, monthly report end -->
+        <!-- overlay work -->
+        <div class="overlay overlay-work">
+          <div class="overlay-img img-work"></div>
+          <div class="data-box">
+            <div class="elipses-bar">
+              <div>
+                <small>Work</small>
+              </div>
+              <div>
+                <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
+              </div>
+            </div>
+           <div class="log-data">
+            <!-- weekly -->
+            <h1>32hrs</h1>
+            <small>Last Week - 36hrs</small>
+            <!-- weekly -->
+           </div>
+          </div>
+        </div>
+        <!-- overlay work -->
+        <!-- overlay fun -->
+        <div class="overlay overlay-fun">
+          <div class="overlay-img img-case"></div>
+          <div class="data-box">
+            <div class="elipses-bar">
+              <div>
+                <small>Play</small>
+              </div>
+              <div>
+                <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
+              </div>
+            </div>
+            <div class="log-data">
+                <!-- weekly -->
+                <h1>10hrs</h1>
+                <small>Last Week - 8hrs</small>
+                <!-- weekly -->
+            </div>
+          </div>
+        </div>
+        <!-- overlay fun -->
+        <!-- overlay study -->
+        <div class="overlay overlay-study">
+          <div class="overlay-img img-study"></div>
+          <div class="data-box">
+            <div class="elipses-bar">
+              <div>
+                <small>Study</small>
+              </div>
+              <div>
+                <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
+              </div>
+            </div>
+            <!-- weekly -->
+           <div class="log-data">
+            <h1>4hrs</h1>
+            <small>Last Week - 7hrs</small>
+           </div>
+            <!-- weekly -->
+          </div>
+        </div>
+        <!-- overlay study -->
+        <div class="data-selection">
+          <ul class="data-toggle">
+            <li>
+              <a href="#">Daily</a>
+            </li>
+            <li>
+              <a href="#">Weekly</a>
+            </li>
+            <li>
+              <a href="#">Monthly</a>
+            </li>
+          </ul>
+        </div>
+         
+        <!-- overlay exercise -->
+        <div class="overlay transform overlay-exercise">
+          <div class="overlay-img img-exercise"></div>
+          <div class="data-box">
+            <div class="elipses-bar">
+              <div>
+                <small>Exercise</small>
+              </div>
+              <div>
+                <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
+              </div>
+            </div>
+           <div class="log-data">
+            <!-- weekly -->
+            <h1>4hrs</h1>
+            <small>Last Week - 5hrs</small>
+            <!-- weekly -->
+           </div>
+          </div>
+        </div>
+        <!-- overlay exericse -->
+        <div class="overlay transform overlay-social">
+          <div class="overlay-img img-social"></div>
+          <div class="data-box">
+            <div class="elipses-bar">
+              <div>
+                <small>Social</small>
+              </div>
+              <div>
+                <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
+              </div>
+            </div>
+             <div class="log-data">
+              <!-- weekly -->
+              <h1>5hrs</h1>
+              <small>Last Week - 10hrs</small>
+              <!-- weekly -->
+             </div>
+          </div>
+        </div>
+        <div class="overlay transform overlay-care">
+          <div class="overlay-img img-care"></div>
+          <div class="data-box">
+            <div class="elipses-bar">
+              <div>
+                <small>Self Care</small>
+              </div>
+              <div>
+                <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
+              </div>
+            </div>
+              <!-- weekly -->
+             <div class="log-data">
+              <h1>2hrs</h1>
+              <small>Last Week - 2hrs</small>
+             </div>
+              <!-- weekly -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- grid data -->
+  </main>
 
-  <!-- grid data -->
-   <div class="grid-data">
-    
-   </div>
-  <!-- grid data -->
+  <!-- Work
+  5hrs daily -->
+  <!-- Previous - 7hrs daily -->
+  <!-- Previous - 36hrs weekly -->
+  <!-- 103hrs monthly -->
+  <!-- Previous - 128hrs monthly -->
 
-  Report for
-  Jeremy Robson
+  <!-- Play
+  1hr daily -->
+  <!-- Previous - 2hrs daily -->
+  <!-- 10hrs weekly -->
+  <!-- Previous - 8hrs weekly -->
+  <!-- 23hrs monthly -->
+  <!-- Previous - 29hrs monthly -->
 
-  Daily
-  Weekly
-  Monthly
+  <!-- Study
+  0hrs daily -->
+  <!-- Previous - 1hr daily -->
+  <!-- 4hrs weekly -->
+  <!-- Previous - 7hrs weekly -->
+  <!-- 13hrs monthly -->
+  <!-- Previous - 19hrs monthly -->
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+  <!-- Exercise
+  1hr daily -->
+  <!-- Previous - 1hr daily -->
+  <!-- 4hrs weekly -->
+  <!-- Previous - 5hrs weekly -->
+  <!-- 11hrs monthly -->
+  <!-- Previous - 18hrs monthly -->
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+  <!-- Social
+  1hr daily -->
+  <!-- Previous - 3hrs daily -->
+  <!-- 5hrs weekly -->
+  <!-- Previous - 10hrs weekly -->
+  <!-- 21hrs monthly -->
+  <!-- Previous - 23hrs monthly -->
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <!-- Self Care
+  0hrs daily -->
+  <!-- Previous - 1hr daily -->
+  <!-- 2hrs weekly -->
+  <!-- Previous - 2hrs weekly -->
+  <!-- 7hrs monthly -->
+  <!-- Previous - 11hrs monthly -->
 </body>
 </html>

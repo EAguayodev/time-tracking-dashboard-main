@@ -22,57 +22,52 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Switch between viewing Daily, Weekly, and Monthly stats
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
 ### Links
 
-- Solution URL: [Github](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/EAguayodev/time-tracking-dashboard-main/tree/master/time-tracking-dashboard-main)
 - Live Site URL: [Vercel](https://time-tracking-dashboard-main-orcin.vercel.app/)
 
 ## My process
+My process involved these steps
+
+1.HTML Structure: Write the HTML layout for the data and profile reports (daily, weekly, and monthly).
+2.CSS Grid Layout: Use a CSS grid to display the columns in a repeat(2, 1fr) structure, ensuring consistent layout across the dashboard.
+3.JavaScript for Dynamic Data: Fetch the local JSON file to display the starting data and implement functionality to update the display based on user interaction with tabs (daily, weekly, monthly).
+This provides a clean, functional design with responsive data visualization.
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
 - Desktop-first workflow
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+In this challenge I learned how to fetch data from a local json file to display daily, weekly, and monthly data on personal categories using Vanilla Javascript. Integrated assistance from ChatGPT to help speed up the process and write celan javascript code.
 
 To see how you can add code snippets, see below:
 
 ```html
 <div class="overlay overlay-work">
-                <div class="overlay-img img-work"></div>
-                <div class="data-box">
-                  <div class="elipses-bar">
-                    <div>
-                      <small>Work</small>
-                    </div>
-                    <div>
-                      <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
-                    </div>
-                  </div>
-                  <div class="log-data">
-                    <!-- weekly -->
-                    <h1>32hrs</h1>
-                    <small>Last Week - 36hrs</small>
-                    <!-- weekly -->
-                  </div>
-                </div>
-              </div>
+  <div class="overlay-img img-work"></div>
+  <div class="data-box">
+    <div class="elipses-bar">
+      <div>
+        <small>Work</small>
+      </div>
+      <div>
+        <img class="ellipsis-bars" src="images/icon-ellipsis.svg" alt="elispes bars for hover effect">
+      </div>
+    </div>
+    <div class="log-data">
+      <!-- weekly -->
+      <h1>32hrs</h1>
+      <small>Last Week - 36hrs</small>
+      <!-- weekly -->
+    </div>
+  </div>
+</div>
 ```
 ```css
 .data-box {
@@ -87,31 +82,31 @@ To see how you can add code snippets, see below:
 }
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+function fetchData() {
+   fetch("./data.json") // Assuming the file is in the same directory
+     .then((response) => response.json())
+     .then((data) => {
+       timeData = data; // Store fetched data
+       updateData("weekly"); // Initialize with weekly data by default
+     })
+     .catch((error) => console.error("Error fetching the data:", error));
+ }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I'll continue the Javascript learning path to level up my skills in the methodoliges provided in the Javascript learning path to honed down the main concepts needed to start using javascript frameworks.
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [](https://www.geeksforgeeks.org/read-json-file-using-javascript/#) - This resource helped me get ideas on how to generate the javascript code needed to grab the local.json data and display each types of data according to the tab clicked.
+
 
 
 ## Author
 
 - Website - [Eric Aguayo](https://www.ericaguayo.com)
 - Frontend Mentor - [@EAguayodev](https://www.frontendmentor.io/profile/EAguayodev)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
 
 ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
